@@ -66,3 +66,16 @@ class MyPanel(wx.Panel):
         for i in Square.get_col_ids(square_id):
             digits_in_col += self.squares[i].extract_col_from_square(cell_id)
         return digits_in_col
+
+    def check_for_repetition_in_line(self, cell_id, cell_no):
+        tmp = self.extract_entire_line(self.id, cell_id)
+        if cell_no+1 in tmp:
+            return True
+        return False
+
+    def check_for_repetition_in_col(self, cell_id, cell_no):
+        tmp = self.extract_entire_col(self.id, cell_id)
+        if cell_no+1 in tmp:
+            return True
+        return False
+

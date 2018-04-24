@@ -14,14 +14,15 @@ class Square(wx.Panel):
         self.grid = wx.GridSizer(rows=3, cols=3, hgap=3, vgap=3)
         self.cell = []
         for i in range(3*3):
-            self.cell.append(Options(self, i))
+            self.cell.append(Options(self, self.id*10+i))
             self.grid.Add(self.cell[i], 0, wx.EXPAND)
         self.SetSizer(self.grid)
 
     def determine_cell(self, event):
         """"""
         possibility_id = event.GetId()
-        cell_id = int(possibility_id / 10)
+        square_id = int(possibility_id / 100)
+        cell_id = int((possibility_id-square_id*100) / 10)
         cell_no = possibility_id % 10
         bold_bool = self.parent.startManual.GetValue()
         if not self.validate(cell_id, cell_no):
@@ -111,4 +112,3 @@ class Square(wx.Panel):
         return self.check_for_repetition_in_line(cell_id, cell_no) or \
                self.check_for_repetition_in_square(cell_no) or \
                self.check_for_repetition_in_col(cell_id, cell_no)
-
