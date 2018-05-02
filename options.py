@@ -15,7 +15,7 @@ class Options(wx.GridSizer):
             t_button = wx.ToggleButton(parent, id=self.id * 10 + i, label='%s' % (i + 1), size=wx.Size(20, 20))
             self.possibilities.append(t_button)
             self.possibilities[i].SetFont(self.small_font)
-            self.possibilities[i].SetValue(True)
+            self.possibilities[i].SetValue(False)
             self.possibilities[i].Disable()
             self.possibilities[i].Bind(wx.EVT_RIGHT_DOWN, parent.determine_cell)
             self.Add(self.possibilities[i], 0, wx.EXPAND)

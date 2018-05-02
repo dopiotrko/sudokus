@@ -21,21 +21,24 @@ class Square(wx.Panel):
     def determine_cell(self, event):
         """"""
         possibility_id = event.GetId()
-        square_id = int(possibility_id / 100)
-        cell_id = int((possibility_id-square_id*100) / 10)
-        cell_no = possibility_id % 10
+        option_id, cell_no = divmod(possibility_id, 10)
+        square_id, cell_id = divmod(option_id, 10)
         bold_bool = self.parent.startManual.GetValue()
         if not self.validate(cell_id, cell_no):
-            self.determined_cells[cell_id] = DeterminedCell(self, cell_id, cell_no, bold_bool)
+            self.determined_cells[cell_id] = DeterminedCell(self, option_id, cell_no, bold_bool)
             self.grid.Hide(cell_id)
             self.grid.Detach(cell_id)
             self.grid.Insert(cell_id, self.determined_cells[cell_id])
             self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
+            self.Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
             self.grid.Layout()
+            event.ResumePropagation(2)
+            event.Skip()
 
     def undetermine_cell(self, event):
         """"""
-        cell_id = event.GetId()
+        option_id = event.GetId()
+        cell_id = option_id % 10
         self.grid.Hide(cell_id)
         self.grid.Remove(cell_id)
         self.determined_cells[cell_id] = None
@@ -43,6 +46,7 @@ class Square(wx.Panel):
         self.grid.Show(cell_id, True)
         self.grid.Layout()
     #        self.grid.Fit(self)
+        event.Skip()
 
     def reset_determine_cells(self):
         for single_det_cell in self.determined_cells:

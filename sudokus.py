@@ -8,7 +8,7 @@ class MainWidow(wx.Frame):
     # ----------------------------------------------------------------------
     def __init__(self):
         """Constructor"""
-        wx.Frame.__init__(self, parent=None, title="Add / Remove Buttons")
+        wx.Frame.__init__(self, parent=None, title="Sudoku Solver")
         self.fSizer = wx.BoxSizer(wx.VERTICAL)
         main_panel = MyPanel(self)
         self.fSizer.Add(main_panel, 1, wx.EXPAND)

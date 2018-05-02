@@ -1,5 +1,6 @@
 import wx
 from square import *
+from grid import *
 
 
 class MyPanel(wx.Panel):
@@ -11,7 +12,8 @@ class MyPanel(wx.Panel):
         self.number_of_buttons = 0
         self.frame = parent
         self.squares = []
-        #        square=Square(self)
+        self.grid = Grid()
+        self.grid.test()
         self.mainGrid = wx.GridSizer(rows=3, cols=3, hgap=0, vgap=0)
 
         self.mainSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -38,6 +40,8 @@ class MyPanel(wx.Panel):
     def manual_start(self, event):
         """"""
         if event.GetEventObject().GetValue():
+            self.grid.reset()
+            self.Bind(wx.EVT_RIGHT_DOWN, self.determine_cell)
             [singleSquare.enable_all(True) for singleSquare in self.squares]
             [singleSquare.reset_determine_cells() for singleSquare in self.squares]
             [singleSquare.toggle_all(True) for singleSquare in self.squares]
@@ -79,3 +83,13 @@ class MyPanel(wx.Panel):
             return True
         return False
 
+    def determine_cell(self, event):
+        possibility_id = event.GetId()
+        self.grid.determine_cell(possibility_id)
+        self.grid.test()
+
+    def undetermine_cell(self, event):
+        option_id = event.GetId()
+        self.grid.undetermine_cell(option_id)
+        print('un')
+        self.grid.test()
