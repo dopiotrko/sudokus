@@ -1,6 +1,7 @@
 import wx
 from square import *
 from grid import *
+from threading import Thread
 
 
 class MyPanel(wx.Panel):
@@ -12,7 +13,7 @@ class MyPanel(wx.Panel):
         self.number_of_buttons = 0
         self.frame = parent
         self.squares = []
-        self.grid = Grid()
+        self.grid = Grid(self)
         self.grid.test()
         self.mainGrid = wx.GridSizer(rows=3, cols=3, hgap=0, vgap=0)
 
@@ -41,7 +42,7 @@ class MyPanel(wx.Panel):
         """"""
         if event.GetEventObject().GetValue():
             self.grid.reset()
-            self.Bind(wx.EVT_RIGHT_DOWN, self.determine_cell)
+            self.Bind(wx.EVT_RIGHT_DOWN, self.determine_cell_thread)
             [singleSquare.enable_all(True) for singleSquare in self.squares]
             [singleSquare.reset_determine_cells() for singleSquare in self.squares]
             [singleSquare.toggle_all(True) for singleSquare in self.squares]
@@ -83,6 +84,10 @@ class MyPanel(wx.Panel):
             return True
         return False
 
+    def determine_cell_thread(self, event):
+        thread = Thread(target=self.determine_cell, args=(event,))
+        thread.start()
+
     def determine_cell(self, event):
         possibility_id = event.GetId()
         self.grid.determine_cell(possibility_id)
@@ -93,3 +98,9 @@ class MyPanel(wx.Panel):
         self.grid.undetermine_cell(option_id)
         print('un')
         self.grid.test()
+
+    def show_error(self, option_id):
+        square_id, cell_id = divmod(option_id, 10)
+        tmp = self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id)
+        print(tmp)
+

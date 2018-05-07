@@ -29,9 +29,9 @@ class Square(wx.Panel):
             self.grid.Hide(cell_id)
             self.grid.Detach(cell_id)
             self.grid.Insert(cell_id, self.determined_cells[cell_id])
+            self.grid.Layout()
             self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
             self.Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
-            self.grid.Layout()
             event.ResumePropagation(2)
             event.Skip()
 
@@ -116,3 +116,6 @@ class Square(wx.Panel):
         return self.check_for_repetition_in_line(cell_id, cell_no) or \
                self.check_for_repetition_in_square(cell_no) or \
                self.check_for_repetition_in_col(cell_id, cell_no)
+
+    def show_error(self, cell_id):
+        tmp = self.grid.GetItem(cell_id).GetWindow().show_error()

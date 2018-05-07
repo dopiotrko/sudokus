@@ -1,4 +1,5 @@
 import wx
+from time import sleep
 
 
 class DeterminedCell(wx.Button):
@@ -14,3 +15,11 @@ class DeterminedCell(wx.Button):
 
     def get_int_label(self):
         return self.int_label
+
+    def show_error(self):
+        tmp = self.GetBackgroundColour()
+        self.SetBackgroundColour(wx.Colour(255, 0, 0))
+        sleep(.3)
+        self.SetBackgroundColour(tmp)
+        sleep(.1)
+        self.SetBackgroundColour(wx.Colour(255, 0, 0))
