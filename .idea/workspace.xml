@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/determinedcell.py" beforeDir="false" afterPath="$PROJECT_DIR$/determinedcell.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/options.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/square.py" beforeDir="false" afterPath="$PROJECT_DIR$/square.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wait.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,9 +23,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -33,8 +30,8 @@
       <file leaf-file-name="grid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="731">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -42,23 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="panel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="square.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="square.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/square.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
+            <state relative-caret-position="192">
+              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -69,8 +63,8 @@
       <file leaf-file-name="options.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="288">
+              <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -78,8 +72,8 @@
       <file leaf-file-name="determinedcell.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/determinedcell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="340">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -102,14 +96,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/wait.py" />
         <option value="$PROJECT_DIR$/sudokus.py" />
         <option value="$PROJECT_DIR$/swap.py" />
-        <option value="$PROJECT_DIR$/determinedcell.py" />
         <option value="$PROJECT_DIR$/square.py" />
-        <option value="$PROJECT_DIR$/grid.py" />
+        <option value="$PROJECT_DIR$/determinedcell.py" />
+        <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/panel.py" />
+        <option value="$PROJECT_DIR$/grid.py" />
       </list>
     </option>
   </component>
@@ -124,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,7 +134,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,32 +204,38 @@
       <option name="project" value="LOCAL" />
       <updated>1525242715897</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona">
+      <created>1525674784713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525674784713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="91" width="1920" height="1069" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32939914" />
-      <window_info active="true" anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
+      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19032258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19247311" />
       <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
       <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32939914" />
+      <window_info anchor="bottom" id="Find" order="6" visible="true" weight="0.32939914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.30364805" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.30364805" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
       <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
     </layout>
   </component>
@@ -245,30 +245,50 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="niewielkie zmiany" />
     <MESSAGE value="Dodano klasę Grid - siatkę w której będzie można rozwiązać sudoku metodą mote-carlo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodano klasę Grid - siatkę w której będzie można rozwiązać sudoku metodą mote-carlo" />
+    <MESSAGE value="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="possibility_id == 14&#10;possibility_id gt then 888" language="Python" />
           <url>file://$PROJECT_DIR$/panel.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/panel.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="41" />
+          <line>92</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="42" />
+      <option name="time" value="44" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>possibility_id == 14
+possibility_id gt then 888</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>possibility_id == 15
+possibility_id &gt; 888</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>possibility_id == 15
+possibility_id &gt;888</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>possibility_id == 15</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>init_id&gt;87</expression-string>
         <language-id>Python</language-id>
@@ -284,11 +304,59 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sudokus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/determinedcell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/square.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sudokus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -323,9 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -333,9 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -367,9 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -377,9 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -387,9 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
           <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -421,9 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -431,9 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -465,9 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -475,9 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -505,26 +546,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sudokus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/swap.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -546,10 +568,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sudokus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/determinedcell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -558,35 +587,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="288">
+          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/square.py">
+    <entry file="file://$PROJECT_DIR$/panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="731">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel.py">
+    <entry file="file://$PROJECT_DIR$/square.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+        <state relative-caret-position="192">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

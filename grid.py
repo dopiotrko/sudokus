@@ -41,7 +41,7 @@ class Grid(list):
     def determine_cell(self, possibility_id):
         option_id, cell_no = divmod(possibility_id, 10)
         self[self.coordinates(option_id)] = cell_no
-        sleep(1)
+#        sleep(1)
 #        self.squares[square_id].determined_cells[cell_id].SetForegroundColour(wx.Colour(255, 0, 0))
         self.panel.show_error(option_id)
         print('dddddddddddddddddd')

@@ -17,6 +17,7 @@ class Options(wx.GridSizer):
             self.possibilities[i].SetFont(self.small_font)
             self.possibilities[i].SetValue(False)
             self.possibilities[i].Disable()
+            self.possibilities[i].Bind(wx.EVT_RIGHT_DOWN, parent.parent.determine_cell_thread)
             self.possibilities[i].Bind(wx.EVT_RIGHT_DOWN, parent.determine_cell)
             self.Add(self.possibilities[i], 0, wx.EXPAND)
 

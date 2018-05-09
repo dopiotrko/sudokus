@@ -42,7 +42,7 @@ class MyPanel(wx.Panel):
         """"""
         if event.GetEventObject().GetValue():
             self.grid.reset()
-            self.Bind(wx.EVT_RIGHT_DOWN, self.determine_cell_thread)
+#            self.Bind(wx.EVT_RIGHT_DOWN, self.determine_cell_thread)
             [singleSquare.enable_all(True) for singleSquare in self.squares]
             [singleSquare.reset_determine_cells() for singleSquare in self.squares]
             [singleSquare.toggle_all(True) for singleSquare in self.squares]
@@ -85,11 +85,11 @@ class MyPanel(wx.Panel):
         return False
 
     def determine_cell_thread(self, event):
-        thread = Thread(target=self.determine_cell, args=(event,))
+        possibility_id = event.GetId()
+        thread = Thread(target=self.determine_cell, args=(possibility_id,))
         thread.start()
 
-    def determine_cell(self, event):
-        possibility_id = event.GetId()
+    def determine_cell(self, possibility_id):
         self.grid.determine_cell(possibility_id)
         self.grid.test()
 

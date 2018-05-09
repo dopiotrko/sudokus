@@ -30,10 +30,13 @@ class Square(wx.Panel):
             self.grid.Detach(cell_id)
             self.grid.Insert(cell_id, self.determined_cells[cell_id])
             self.grid.Layout()
+            self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
             self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
-            self.Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
             event.ResumePropagation(2)
             event.Skip()
+#            self.determined_cells[cell_id].SetBackgroundColour(wx.Colour(255, 0, 0))
+#            tmp = self.determined_cells[cell_id].GetLabel()
+#            print(tmp)
 
     def undetermine_cell(self, event):
         """"""
@@ -41,6 +44,7 @@ class Square(wx.Panel):
         cell_id = option_id % 10
         self.grid.Hide(cell_id)
         self.grid.Remove(cell_id)
+        self.determined_cells[cell_id].DestroyLater()
         self.determined_cells[cell_id] = None
         self.grid.Insert(cell_id, self.cell[cell_id])
         self.grid.Show(cell_id, True)

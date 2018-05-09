@@ -17,9 +17,11 @@ class DeterminedCell(wx.Button):
         return self.int_label
 
     def show_error(self):
-        tmp = self.GetBackgroundColour()
-        self.SetBackgroundColour(wx.Colour(255, 0, 0))
-        sleep(.3)
-        self.SetBackgroundColour(tmp)
+        tmp = self.GetForegroundColour()
+        self.SetForegroundColour(wx.Colour(205, 0, 0))
+        sleep(.2)
+        self.SetForegroundColour(tmp)
         sleep(.1)
-        self.SetBackgroundColour(wx.Colour(255, 0, 0))
+        self.SetForegroundColour(wx.Colour(205, 0, 0))
+        sleep(.1)
+        self.SetForegroundColour(tmp)
