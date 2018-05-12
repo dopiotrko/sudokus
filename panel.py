@@ -99,8 +99,11 @@ class MyPanel(wx.Panel):
         print('un')
         self.grid.test()
 
-    def show_error(self, option_id):
+    def show_error(self, option_id, show):
         square_id, cell_id = divmod(option_id, 10)
-        tmp = self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id)
+        tmp = self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id, show)
         print(tmp)
 
+    def get_cell(self, option_id):
+        square_id, cell_id = divmod(option_id, 10)
+        return self.squares[square_id].get_cell(cell_id)

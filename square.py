@@ -24,18 +24,16 @@ class Square(wx.Panel):
         option_id, cell_no = divmod(possibility_id, 10)
         square_id, cell_id = divmod(option_id, 10)
         bold_bool = self.parent.startManual.GetValue()
-        if not self.validate(cell_id, cell_no):
-            self.determined_cells[cell_id] = DeterminedCell(self, option_id, cell_no, bold_bool)
-            self.grid.Hide(cell_id)
-            self.grid.Detach(cell_id)
-            self.grid.Insert(cell_id, self.determined_cells[cell_id])
-            self.grid.Layout()
-            self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
-            self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
-            event.ResumePropagation(2)
-            event.Skip()
+        self.determined_cells[cell_id] = DeterminedCell(self, option_id, cell_no, bold_bool)
+        self.grid.Hide(cell_id)
+        self.grid.Detach(cell_id)
+        self.grid.Insert(cell_id, self.determined_cells[cell_id])
+        self.grid.Layout()
+        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
+        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
+        event.ResumePropagation(2)
+        event.Skip()
 #            self.determined_cells[cell_id].SetBackgroundColour(wx.Colour(255, 0, 0))
-#            tmp = self.determined_cells[cell_id].GetLabel()
 #            print(tmp)
 
     def undetermine_cell(self, event):
@@ -55,9 +53,13 @@ class Square(wx.Panel):
     def reset_determine_cells(self):
         for single_det_cell in self.determined_cells:
             if single_det_cell is not None:
-                determined_cell_id = single_det_cell.GetId()
-                event = wx.PyCommandEvent(wx.EVT_BUTTON.typeId, determined_cell_id)
-                wx.PostEvent(single_det_cell, event)
+                self.reset_determine_cell(single_det_cell)
+
+    @staticmethod
+    def reset_determine_cell(single_det_cell):
+        determined_cell_id = single_det_cell.GetId()
+        event = wx.PyCommandEvent(wx.EVT_BUTTON.typeId, determined_cell_id)
+        wx.PostEvent(single_det_cell, event)
 
     def enable_all(self, state):
         [singleCell.enable_all(state) for singleCell in self.cell]
@@ -68,58 +70,8 @@ class Square(wx.Panel):
     def disable_all_init_cells(self):
         [single_det_cell.Disable() for single_det_cell in self.determined_cells if single_det_cell is not None]
 
-    def check_for_repetition_in_square(self, cell_no):
-        # sprawdza czy mamy już zdefiniowaną cyfre 'init_no' w danym kwadracie, jeśli tak to zwraca True
-        list_of_det_cells = [single_det_cell.get_int_label() for single_det_cell in self.determined_cells
-                             if single_det_cell is not None]
-        if cell_no+1 in list_of_det_cells:
-            return True
-        return False
+    def show_error(self, cell_id, show):
+        self.grid.GetItem(cell_id).GetWindow().show_error(show)
 
-    @staticmethod
-    def get_line_ids(init_id):
-        if init_id in [0, 1, 2]:
-            return [0, 1, 2]
-        if init_id in [3, 4, 5]:
-            return [3, 4, 5]
-        if init_id in [6, 7, 8]:
-            return [6, 7, 8]
-
-    @staticmethod
-    def get_col_ids(init_id):
-        if init_id in [0, 3, 6]:
-            return [0, 3, 6]
-        if init_id in [1, 4, 7]:
-            return [1, 4, 7]
-        if init_id in [2, 5, 8]:
-            return [2, 5, 8]
-
-    def extract_line_from_square(self, cell_id):
-        # zwraca zdefiniowene już cyfry, z tej linji z tego kwadratu
-        return [self.determined_cells[i].get_int_label() for i in self.get_line_ids(cell_id)
-                if self.determined_cells[i] is not None]
-
-    def extract_col_from_square(self, cell_id):
-        # zwraca zdefiniowene już cyfry, z tej linji z tego kwadratu
-        return [self.determined_cells[i].get_int_label() for i in self.get_col_ids(cell_id)
-                if self.determined_cells[i] is not None]
-
-    def check_for_repetition_in_line(self, cell_id, cell_no):
-        tmp = self.parent.extract_entire_line(self.id, cell_id)
-        if cell_no+1 in tmp:
-            return True
-        return False
-
-    def check_for_repetition_in_col(self, cell_id, cell_no):
-        tmp = self.parent.extract_entire_col(self.id, cell_id)
-        if cell_no+1 in tmp:
-            return True
-        return False
-
-    def validate(self, cell_id, cell_no):
-        return self.check_for_repetition_in_line(cell_id, cell_no) or \
-               self.check_for_repetition_in_square(cell_no) or \
-               self.check_for_repetition_in_col(cell_id, cell_no)
-
-    def show_error(self, cell_id):
-        tmp = self.grid.GetItem(cell_id).GetWindow().show_error()
+    def get_cell(self, cell_id):
+        return self.determined_cells[cell_id]
