@@ -14,7 +14,6 @@ class MyPanel(wx.Panel):
         self.frame = parent
         self.squares = []
         self.grid = Grid(self)
-        self.grid.test()
         self.mainGrid = wx.GridSizer(rows=3, cols=3, hgap=0, vgap=0)
 
         self.mainSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -91,18 +90,14 @@ class MyPanel(wx.Panel):
 
     def determine_cell(self, possibility_id):
         self.grid.determine_cell(possibility_id)
-        self.grid.test()
 
     def undetermine_cell(self, event):
         option_id = event.GetId()
         self.grid.undetermine_cell(option_id)
-        print('un')
-        self.grid.test()
 
     def show_error(self, option_id, show):
         square_id, cell_id = divmod(option_id, 10)
-        tmp = self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id, show)
-        print(tmp)
+        self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id, show)
 
     def get_cell(self, option_id):
         square_id, cell_id = divmod(option_id, 10)
