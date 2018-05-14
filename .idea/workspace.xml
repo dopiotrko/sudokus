@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6f58b1-f83a-45da-b80e-bc9521bbdeaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sudokus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sudokus.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/determinedcell.py" beforeDir="false" afterPath="$PROJECT_DIR$/determinedcell.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/grid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/square.py" beforeDir="false" afterPath="$PROJECT_DIR$/square.py" afterDir="false" />
@@ -27,13 +25,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grid.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="grid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="221">
+              <caret line="79" column="74" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,8 +40,8 @@
       <file leaf-file-name="panel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+            <state relative-caret-position="918">
+              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -51,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="square.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="square.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/square.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="357">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -66,8 +64,8 @@
       <file leaf-file-name="options.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="340">
+              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -75,8 +73,8 @@
       <file leaf-file-name="determinedcell.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/determinedcell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -104,9 +102,9 @@
         <option value="$PROJECT_DIR$/swap.py" />
         <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/determinedcell.py" />
+        <option value="$PROJECT_DIR$/square.py" />
         <option value="$PROJECT_DIR$/panel.py" />
         <option value="$PROJECT_DIR$/grid.py" />
-        <option value="$PROJECT_DIR$/square.py" />
       </list>
     </option>
   </component>
@@ -205,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525674784713</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Zmiana sposobów wyszukiwania kolizji (podwujnego wustępowania cyfry w wierszu/kolumnie/kwadracie&#10;Zmiana sposobu prezentacji kolizji&#10;Dodanie cofnięcia kolizji">
+      <created>1526158842334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526158842334</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową">
+      <created>1526182703026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526182703026</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -221,40 +233,27 @@
     <frame x="0" y="91" width="1920" height="1069" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="10" visible="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32832617" />
+      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32939914" />
-      <window_info active="true" anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
+      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19247311" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19462365" />
       <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
       <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.23175965" />
+      <window_info active="true" anchor="bottom" id="Find" order="6" visible="true" weight="0.32939914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.30364805" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19247311" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
-      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
-      <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
-      <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
-      <window_info anchor="bottom" id="Find" order="6" visible="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.30364805" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="11" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -264,18 +263,35 @@
     <MESSAGE value="niewielkie zmiany" />
     <MESSAGE value="Dodano klasę Grid - siatkę w której będzie można rozwiązać sudoku metodą mote-carlo" />
     <MESSAGE value="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona" />
+    <MESSAGE value="Zmiana sposobów wyszukiwania kolizji (podwujnego wustępowania cyfry w wierszu/kolumnie/kwadracie&#10;Zmiana sposobu prezentacji kolizji&#10;Dodanie cofnięcia kolizji" />
+    <MESSAGE value="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="49" />
+      <option name="time" value="68" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>solving[1] is 8</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>solving[0] is 8</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>j is 4</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>possibility_id == 14
 possibility_id gt then 888</expression-string>
@@ -339,7 +355,7 @@ possibility_id &gt;888</expression-string>
         <state relative-caret-position="765">
           <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -400,7 +416,7 @@ possibility_id &gt;888</expression-string>
         <state relative-caret-position="765">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -654,16 +670,6 @@ possibility_id &gt;888</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/determinedcell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sudokus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -671,10 +677,10 @@ possibility_id &gt;888</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel.py">
+    <entry file="file://$PROJECT_DIR$/determinedcell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="221">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -683,27 +689,37 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/square.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="357">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="79" column="74" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

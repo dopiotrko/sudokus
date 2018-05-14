@@ -29,7 +29,7 @@ class Square(wx.Panel):
         self.grid.Detach(cell_id)
         self.grid.Insert(cell_id, self.determined_cells[cell_id])
         self.grid.Layout()
-        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.undetermine_cell)
+        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.grid.undetermine_cell)
         self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
         event.ResumePropagation(2)
         event.Skip()

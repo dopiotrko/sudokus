@@ -57,48 +57,17 @@ class MyPanel(wx.Panel):
     # ----------------------------------------------------------------------
     def automatic_start(self, event):
         """"""
-        self.extract_entire_line(1, 3)
-
-    def extract_entire_line(self, square_id, cell_id):
-        digits_in_line = []
-        for i in Square.get_line_ids(square_id):
-            digits_in_line += self.squares[i].extract_line_from_square(cell_id)
-        return digits_in_line
-
-    def extract_entire_col(self, square_id, cell_id):
-        digits_in_col = []
-        for i in Square.get_col_ids(square_id):
-            digits_in_col += self.squares[i].extract_col_from_square(cell_id)
-        return digits_in_col
-
-    def check_for_repetition_in_line(self, cell_id, cell_no):
-        tmp = self.extract_entire_line(self.id, cell_id)
-        if cell_no+1 in tmp:
-            return True
-        return False
-
-    def check_for_repetition_in_col(self, cell_id, cell_no):
-        tmp = self.extract_entire_col(self.id, cell_id)
-        if cell_no+1 in tmp:
-            return True
-        return False
+        pass
 
     def determine_cell_thread(self, event):
         possibility_id = event.GetId()
-        thread = Thread(target=self.determine_cell, args=(possibility_id,))
+        thread = Thread(target=self.grid.determine_cell, args=(possibility_id,))
         thread.start()
 
-    def determine_cell(self, possibility_id):
-        self.grid.determine_cell(possibility_id)
-
-    def undetermine_cell(self, event):
-        option_id = event.GetId()
-        self.grid.undetermine_cell(option_id)
-
     def show_error(self, option_id, show):
-        square_id, cell_id = divmod(option_id, 10)
+        square_id, cell_id = option_id
         self.mainGrid.GetItem(square_id).GetWindow().show_error(cell_id, show)
 
     def get_cell(self, option_id):
-        square_id, cell_id = divmod(option_id, 10)
+        square_id, cell_id = option_id
         return self.squares[square_id].get_cell(cell_id)
