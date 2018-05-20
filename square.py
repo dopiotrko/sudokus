@@ -29,17 +29,19 @@ class Square(wx.Panel):
         self.grid.Detach(cell_id)
         self.grid.Insert(cell_id, self.determined_cells[cell_id])
         self.grid.Layout()
-        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.grid.undetermine_cell)
+        self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.parent.undetermine_grid)
         self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine_cell)
         event.ResumePropagation(2)
         event.Skip()
 #            self.determined_cells[cell_id].SetBackgroundColour(wx.Colour(255, 0, 0))
 #            print(tmp)
 
-    def undetermine_cell(self, event):
+    def undetermine_cell(self, event=None, cell_id=None):
         """"""
-        option_id = event.GetId()
-        cell_id = option_id % 10
+        if event is not None:
+            option_id = event.GetId()
+            cell_id = option_id % 10
+            event.Skip()
         self.grid.Hide(cell_id)
         self.grid.Remove(cell_id)
         self.determined_cells[cell_id].DestroyLater()
@@ -48,18 +50,13 @@ class Square(wx.Panel):
         self.grid.Show(cell_id, True)
         self.grid.Layout()
     #        self.grid.Fit(self)
-        event.Skip()
 
     def reset_determine_cells(self):
         for single_det_cell in self.determined_cells:
             if single_det_cell is not None:
-                self.reset_determine_cell(single_det_cell)
-
-    @staticmethod
-    def reset_determine_cell(single_det_cell):
-        determined_cell_id = single_det_cell.GetId()
-        event = wx.PyCommandEvent(wx.EVT_BUTTON.typeId, determined_cell_id)
-        wx.PostEvent(single_det_cell, event)
+                determined_cell_id = single_det_cell.GetId()
+                cell_id = determined_cell_id % 10
+                self.undetermine_cell(cell_id=cell_id)
 
     def enable_all(self, state):
         [singleCell.enable_all(state) for singleCell in self.cell]
@@ -72,6 +69,3 @@ class Square(wx.Panel):
 
     def show_error(self, cell_id, show):
         self.grid.GetItem(cell_id).GetWindow().show_error(show)
-
-    def get_cell(self, cell_id):
-        return self.determined_cells[cell_id]

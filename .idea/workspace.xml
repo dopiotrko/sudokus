@@ -4,6 +4,7 @@
     <list default="true" id="ff6f58b1-f83a-45da-b80e-bc9521bbdeaa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/options.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/square.py" beforeDir="false" afterPath="$PROJECT_DIR$/square.py" afterDir="false" />
     </list>
@@ -28,8 +29,8 @@
       <file leaf-file-name="grid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="79" column="74" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
+            <state relative-caret-position="-664">
+              <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -40,8 +41,8 @@
       <file leaf-file-name="panel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+            <state relative-caret-position="1275">
+              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -52,8 +53,8 @@
       <file leaf-file-name="square.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/square.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="493">
+              <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -102,8 +103,8 @@
         <option value="$PROJECT_DIR$/swap.py" />
         <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/determinedcell.py" />
-        <option value="$PROJECT_DIR$/square.py" />
         <option value="$PROJECT_DIR$/panel.py" />
+        <option value="$PROJECT_DIR$/square.py" />
         <option value="$PROJECT_DIR$/grid.py" />
       </list>
     </option>
@@ -119,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,6 +131,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526182703026</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="kosmetyczne zmiany: inaczej przekazywane parametry do metod, eventy przypisane do innych metod (bez metod pośrednich)">
+      <created>1526331153014</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1526331153014</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -231,29 +239,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="91" width="1920" height="1069" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32939914" />
-      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19462365" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1967742" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32939914" />
       <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
       <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
-      <window_info active="true" anchor="bottom" id="Find" order="6" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="2" visible="true" weight="0.32296136" />
+      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.30364805" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
       <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32939914" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -265,14 +272,15 @@
     <MESSAGE value="Dodano metodę show_error - narazie nie pokazuje błędu tylko zmienia tło buttona" />
     <MESSAGE value="Zmiana sposobów wyszukiwania kolizji (podwujnego wustępowania cyfry w wierszu/kolumnie/kwadracie&#10;Zmiana sposobu prezentacji kolizji&#10;Dodanie cofnięcia kolizji" />
     <MESSAGE value="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową" />
+    <MESSAGE value="kosmetyczne zmiany: inaczej przekazywane parametry do metod, eventy przypisane do innych metod (bez metod pośrednich)" />
+    <option name="LAST_COMMIT_MESSAGE" value="kosmetyczne zmiany: inaczej przekazywane parametry do metod, eventy przypisane do innych metod (bez metod pośrednich)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="68" />
+      <option name="time" value="81" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -696,8 +704,8 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/square.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="493">
+          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -706,8 +714,8 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="1275">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -716,8 +724,8 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="79" column="74" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
+        <state relative-caret-position="-664">
+          <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
