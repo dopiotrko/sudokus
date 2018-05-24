@@ -63,6 +63,9 @@ class MyPanel(wx.Panel):
 
     def determine_grid_thread(self, event):
         possibility_id = event.GetId()
+        option_id, cell_no = divmod(possibility_id, 10)
+        square_id, cell_id = divmod(option_id, 10)
+        possibility_id = square_id, cell_id, cell_no
         thread = Thread(target=self.grid.get_last().determine_grid, args=(possibility_id,))
         thread.start()
 

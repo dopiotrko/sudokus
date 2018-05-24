@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6f58b1-f83a-45da-b80e-bc9521bbdeaa" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/geodetka.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/geodetka.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/options.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/square.py" beforeDir="false" afterPath="$PROJECT_DIR$/square.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +20,8 @@
       <file leaf-file-name="sudokus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sudokus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -29,10 +29,14 @@
       <file leaf-file-name="grid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-664">
-              <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+            <state relative-caret-position="322">
+              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#3131#3326#0" />
+                <element signature="e#3438#3888#0" />
+                <element signature="e#4389#5154#0" />
+                <element signature="e#5199#6021#0" />
               </folding>
             </state>
           </provider>
@@ -41,8 +45,8 @@
       <file leaf-file-name="panel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            <state relative-caret-position="765">
+              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -53,8 +57,8 @@
       <file leaf-file-name="square.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/square.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+            <state relative-caret-position="850">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -65,7 +69,7 @@
       <file leaf-file-name="options.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="329">
               <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
             </state>
           </provider>
@@ -74,11 +78,20 @@
       <file leaf-file-name="determinedcell.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/determinedcell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="238">
               <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exceptions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exceptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -103,14 +116,16 @@
         <option value="$PROJECT_DIR$/swap.py" />
         <option value="$PROJECT_DIR$/options.py" />
         <option value="$PROJECT_DIR$/determinedcell.py" />
-        <option value="$PROJECT_DIR$/panel.py" />
         <option value="$PROJECT_DIR$/square.py" />
+        <option value="$PROJECT_DIR$/panel.py" />
+        <option value="$PROJECT_DIR$/exceptions.py" />
         <option value="$PROJECT_DIR$/grid.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="91" />
+    <option name="x" value="-4" />
+    <option name="y" value="90" />
     <option name="width" value="1920" />
     <option name="height" value="1069" />
   </component>
@@ -225,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526331153014</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dodano zapisywanie na stosie stan siatki oraz opcji, po każdej zmianie.">
+      <created>1526849437631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1526849437631</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -238,29 +260,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="91" width="1920" height="1069" extended-state="0" />
+    <frame x="-4" y="90" width="1920" height="1069" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1967742" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32939914" />
-      <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
-      <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5024285" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4975715" weight="0.32903227" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="2" visible="true" weight="0.32296136" />
-      <window_info anchor="right" id="Run" order="5" visible="true" weight="0.31989247" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32296136" />
+      <window_info active="true" anchor="right" id="Run" order="5" visible="true" weight="0.38709676" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32939914" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1139785" />
+      <window_info anchor="right" id="R Packages" order="0" weight="0.3295699" />
+      <window_info anchor="right" id="R Graphics" order="1" weight="0.3295699" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32939914" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.30364805" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.38709676" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="4" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32939914" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -273,18 +296,41 @@
     <MESSAGE value="Zmiana sposobów wyszukiwania kolizji (podwujnego wustępowania cyfry w wierszu/kolumnie/kwadracie&#10;Zmiana sposobu prezentacji kolizji&#10;Dodanie cofnięcia kolizji" />
     <MESSAGE value="Dodane rozwiązywanie najprostrzą metodą. #TODO rozwiązywanie trwa wieki, trzeba zmniejszyć złożoność obliczeniową" />
     <MESSAGE value="kosmetyczne zmiany: inaczej przekazywane parametry do metod, eventy przypisane do innych metod (bez metod pośrednich)" />
-    <option name="LAST_COMMIT_MESSAGE" value="kosmetyczne zmiany: inaczej przekazywane parametry do metod, eventy przypisane do innych metod (bez metod pośrednich)" />
+    <MESSAGE value="Dodano zapisywanie na stosie stan siatki oraz opcji, po każdej zmianie." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodano zapisywanie na stosie stan siatki oraz opcji, po każdej zmianie." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/square.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/grid.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/grid.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="81" />
+      <option name="time" value="127" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>determined_count &lt; 4</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>solving[1] is 8</expression-string>
         <language-id>Python</language-id>
@@ -334,23 +380,20 @@ possibility_id &gt;888</expression-string>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>Grid.tmp</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Grid.coordinate_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/swap.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/wx/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="3188" selection-start-line="3188" selection-end-line="3188" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -363,7 +406,11 @@ possibility_id &gt;888</expression-string>
         <state relative-caret-position="765">
           <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#3131#3326#0" />
+            <element signature="e#3438#3888#0" />
+            <element signature="e#4389#5154#0" />
+            <element signature="e#5199#6021#0" />
           </folding>
         </state>
       </provider>
@@ -424,7 +471,11 @@ possibility_id &gt;888</expression-string>
         <state relative-caret-position="765">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#3131#3326#0" />
+            <element signature="e#3438#3888#0" />
+            <element signature="e#4389#5154#0" />
+            <element signature="e#5199#6021#0" />
           </folding>
         </state>
       </provider>
@@ -664,10 +715,48 @@ possibility_id &gt;888</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/wx/core.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2095" selection-start-line="2095" selection-end-line="2095" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sudokus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/determinedcell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="3188" selection-start-line="3188" selection-end-line="3188" />
+          <caret line="2419" selection-start-line="2419" selection-end-line="2419" />
         </state>
       </provider>
     </entry>
@@ -678,34 +767,17 @@ possibility_id &gt;888</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sudokus.py">
+    <entry file="file://$PROJECT_DIR$/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/determinedcell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/square.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        <state relative-caret-position="850">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -714,8 +786,8 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="765">
+          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -724,10 +796,14 @@ possibility_id &gt;888</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-664">
-          <caret line="104" column="27" lean-forward="true" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        <state relative-caret-position="322">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#3131#3326#0" />
+            <element signature="e#3438#3888#0" />
+            <element signature="e#4389#5154#0" />
+            <element signature="e#5199#6021#0" />
           </folding>
         </state>
       </provider>
