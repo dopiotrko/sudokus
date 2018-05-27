@@ -1,9 +1,8 @@
 import wx
-from time import sleep
 
 
 class DeterminedCell(wx.Button):
-    """"""
+    """Cell"""
     def __init__(self, parent, init_id, init_no, bold=False):
         """"Constructor"""
         self.int_label = init_no+1
@@ -18,6 +17,7 @@ class DeterminedCell(wx.Button):
         return self.int_label
 
     def show_error(self, show=True):
+        """Showing collided numbers"""
         '''tmp = self.GetForegroundColour()
         self.SetForegroundColour(wx.Colour(205, 0, 0))
         sleep(.2)

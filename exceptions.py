@@ -8,3 +8,8 @@ class SolvingError(BaseException):
 
 class Solved(BaseException):
     pass
+
+
+class Return(BaseException):
+    """Zdrfiniowany zamiast instukcji przerwania return"""
+    pass
