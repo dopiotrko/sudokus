@@ -1,6 +1,7 @@
 import wx
 from options import *
 from determinedcell import *
+from threading import Thread
 
 
 class Square(wx.Panel):
@@ -9,32 +10,37 @@ class Square(wx.Panel):
         """"Constructor"""
         self.id = init_id
         self.parent = parent
-        self.determined_cells = [None for x in range(9)]
+        self.determined_cells = [None]*9
         wx.Panel.__init__(self, parent, style=wx.SIMPLE_BORDER)
-        self.grid = wx.GridSizer(rows=3, cols=3, hgap=3, vgap=3)
+        self.grid = wx.GridSizer(rows=3, cols=3, hgap=1, vgap=1)
         self.cell = []
         for i in range(3*3):
             self.cell.append(Options(self, self.id*10+i))
             self.grid.Add(self.cell[i], 0, wx.EXPAND)
         self.SetSizer(self.grid)
 
-    def determine_cell(self, event=None, possibility_id=None):
+    def post_determine_cell(self, possibility_id):
+        """Setting GUI cell according to data from grid"""
+        self.cell[possibility_id[1]].post_determined_cell(possibility_id)
+
+    def determine_cell(self, event):
         """Creating/determining single cell, and hiding options of this cell"""
-        if possibility_id is None:
-            possibility_id = event.GetId()
-            option_id, cell_no = divmod(possibility_id, 10)
-            square_id, cell_id = divmod(option_id, 10)
-        else:
-            square_id, cell_id, cell_no = possibility_id
-            option_id = square_id*10+cell_id
-        bold_bool = self.parent.startManual.GetValue()
+        possibility_id = event.GetId()
+        option_id, cell_no = divmod(possibility_id, 10)
+        square_id, cell_id = divmod(option_id, 10)
+        bold_bool = self.parent.grid.init_mode
         self.determined_cells[cell_id] = DeterminedCell(self, option_id, cell_no, bold_bool)
         self.grid.Hide(cell_id)
         self.grid.Detach(cell_id)
         self.grid.Insert(cell_id, self.determined_cells[cell_id])
-        self.grid.Layout()
         self.determined_cells[cell_id].Bind(wx.EVT_BUTTON, self.undetermine)
+        self.grid.Layout()
         event.Skip()
+        Thread(target=self.refresh).start()
+
+    def refresh(self):
+        """Refreshing window to fix layout problems"""
+        wx.CallAfter(self.parent.frame.Layout)
 
     def undetermine(self, event):
         """Colling undetermine functions"""

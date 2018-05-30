@@ -11,10 +11,11 @@ class Grid(list):
     for j in (0, 27, 54):
         for i in (0, 3, 6):
             coordinate_list += tmp[j+i:j+i+3]+tmp[j+i+9:j+i+12]+tmp[j+i+18:j+i+21]
-    solve_count = 0
     del tmp
+    solve_count = 0
     block_errors = True
     one_solution_only = False
+    init_mode = False
     solution = None
 
     def __init__(self, panel, parent_grid=None):
@@ -29,6 +30,14 @@ class Grid(list):
         self.parent_grid = parent_grid
         self.child_grid = None
         self.panel = panel
+
+    def reset(self):
+        self.__class__.solve_count = 0
+        self.__class__.block_errors = True
+        self.__class__.one_solution_only = False
+        self.__class__.init_mode = False
+        self.__class__.solution = None
+
 
     def get_last(self):
         """Returning last element from stack of Grid class"""
@@ -97,11 +106,14 @@ class Grid(list):
                 try:
                     current_grid.solve()
                 except SolvingError:
-                    current_grid.show_errors((option_id,))
+                    current_grid.panel.show_errors((option_id,))
                     current_grid.panel.undetermine_cell(option_id)
                     current_grid.parent_grid.child_grid = None
         else:
             self.panel.undetermine_cell(option_id)
+
+        if self.one_solution_only and self.init_mode:
+            self.panel.startManual.Enable()
 
         current_grid = self.get_last()
 #        current_grid.test()
@@ -119,7 +131,8 @@ class Grid(list):
         """Addidng new Grid to stack: storing user moves (after undetermine of cell) in stack"""
         grid = self.add_grid(option_id)
         grid.calculate_options()
-        self.get_last().solve()
+        if self.init_mode:
+            self.get_last().solve()
 #        grid.test()
 
     def calculate_options(self):
@@ -152,17 +165,9 @@ class Grid(list):
             return True
         errors.append((square_id, cell_id))
         errors = set(errors)
-        self.show_errors(errors)
+        self.panel.show_errors(errors)
 
         return False
-
-    def show_errors(self, errors):
-        """Showing collided numbers"""
-        for x in errors:
-            self.panel.show_error(x, True)
-        sleep(.2)
-        for x in errors:
-            self.panel.show_error(x, False)
 
     def find_repetitions(self, possibility_id):
         """Checking for coordinates of cell colliding with each other in row, column, or square"""
@@ -237,7 +242,7 @@ class Grid(list):
         zeros = (square_sum == 0).sum(), (row_sum == 0).sum(), (col_sum == 0).sum(), (cell_sum == 0).sum()
 
         """Checking if algoritm solved the game.
-        If yes, asking to find up to 5 solutions, and return after success 
+        If yes, asking to find up to 2 solutions, and return after success 
         If solution do not exists, raise SolvingError - catched in determine_grid method"""
         try:
             self.check_if_solved(zeros)
@@ -373,6 +378,7 @@ class Grid(list):
 
     def random_game(self):
         """Starting random game"""
+        self.__class__.init_mode = True
         random_cells = n.random.permutation(self.coordinate_list)
         undetermined_count = 81
         determined_cell_list = []
@@ -382,11 +388,12 @@ class Grid(list):
                 self.get_last().determine_grid(possibility_id)
                 if undetermined_count != self.get_last().count(None):
                     determined_cell_list.append(possibility_id)
+                    undetermined_count -= 1
                     break
             if self.one_solution_only is True:
                 break
 
         self.get_last().test()
         for cell in determined_cell_list:
-            self.panel.determine_cell(cell)
+            self.panel.post_determine_cell(cell)
 

@@ -1,4 +1,7 @@
 import wx
+import wx.lib.newevent
+
+DetermineEvent, EVT_DETERMINE_CELL = wx.lib.newevent.NewCommandEvent()
 
 
 class Options(wx.GridSizer):
@@ -19,6 +22,7 @@ class Options(wx.GridSizer):
             self.possibilities[i].Bind(wx.EVT_RIGHT_DOWN, self.toggle)
             self.possibilities[i].Bind(wx.EVT_LEFT_DOWN, parent.parent.determine_grid_thread)
             self.possibilities[i].Bind(wx.EVT_LEFT_DOWN, parent.determine_cell)
+            self.possibilities[i].Bind(EVT_DETERMINE_CELL, parent.determine_cell)
             self.Add(self.possibilities[i], 0, wx.EXPAND)
 
     def enable_all(self, state):
@@ -35,3 +39,7 @@ class Options(wx.GridSizer):
         """Toggling on/off single possibility of single cell"""
         toggle_button = event.GetEventObject()
         toggle_button.SetValue((not toggle_button.GetValue()))
+
+    def post_determined_cell(self, possibility_id):
+        wx.PostEvent(self.possibilities[possibility_id[2]],
+                     DetermineEvent(id=possibility_id[0]*100+possibility_id[1]*10+possibility_id[2]))
