@@ -1,5 +1,4 @@
 from itertools import repeat, product
-from time import sleep
 import numpy as n
 from exceptions import *
 
@@ -133,6 +132,8 @@ class Grid(list):
         grid.calculate_options()
         if self.init_mode:
             self.get_last().solve()
+            if not self.one_solution_only:
+                self.panel.startManual.Disable()
 #        grid.test()
 
     def calculate_options(self):
@@ -307,6 +308,7 @@ class Grid(list):
             else:
                 #  print('2 or more solution available')
                 self.__class__.solve_count = 0
+                self.__class__.one_solution_only = False
                 raise Return
         if zeros != tuple([determined_count] * 4) or find_next_solution:
             try:
@@ -316,7 +318,7 @@ class Grid(list):
                 if self.solve_count is not 0:
                     print(self.solve_count, 'solutions available ')
                     if self.solve_count is 1:
-                        self.__class__.solution = n.array(self)
+                        self.__class__.solution = self
                         self.__class__.one_solution_only = True
                     else:
                         self.__class__.one_solution_only = False
@@ -397,3 +399,20 @@ class Grid(list):
         for cell in determined_cell_list:
             self.panel.post_determine_cell(cell)
 
+    def check_correctness(self):
+        sol = self.get_errors_list()
+        errors = [self.grid_to_panel_co(error) for error in sol]
+        self.panel.show_errors(errors, 5)
+
+    def get_errors_list(self):
+        differ = n.equal(self.get_last(), self.solution)
+        not_none = n.equal(self.get_last(), None)
+        sol = n.nonzero(n.equal(not_none, differ))[0]
+        return sol
+
+    def solve_game(self):
+        differ = n.nonzero(n.not_equal(self.get_last(), self.solution))[0]
+        for cell in differ:
+            options_id = self.grid_to_panel_co(cell)
+            cell_no = self.solution[cell]
+            self.panel.post_determine_cell((options_id[0], options_id[1], cell_no))

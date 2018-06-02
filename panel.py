@@ -2,6 +2,7 @@ import wx
 from square import *
 from grid import *
 from threading import Thread
+from time import sleep
 
 
 class MyPanel(wx.Panel):
@@ -33,10 +34,12 @@ class MyPanel(wx.Panel):
         self.controlSizer.Add(self.validate_in_flow, 0, wx.CENTER | wx.ALL, 5)
 
         self.check = wx.Button(self, label="Check")
-        self.check.Bind(wx.EVT_BUTTON, self.check_game)
+        self.check.Disable()
+        self.check.Bind(wx.EVT_BUTTON, self.check_correctness)
         self.controlSizer.Add(self.check, 0, wx.EXPAND | wx.ALL, 5)
 
         self.solve = wx.Button(self, label="Solve")
+        self.solve.Disable()
         self.solve.Bind(wx.EVT_BUTTON, self.solve_game)
         self.controlSizer.Add(self.solve, 0, wx.EXPAND | wx.ALL, 5)
 
@@ -76,6 +79,8 @@ class MyPanel(wx.Panel):
             self.status_bar.SetStatusText("Play the game")
             self.startManual.SetLabel("Set new game manually")
             self.validate_in_flow.Enable()
+            self.check.Enable()
+            self.solve.Enable()
             self.startManual.Disable()
             self.set_block_errors(state=False)
             self.grid.__class__.init_mode = False
@@ -92,6 +97,8 @@ class MyPanel(wx.Panel):
         self.startManual.Disable()
         self.startAuto.Disable()
         self.endGame.Enable()
+        self.check.Enable()
+        self.solve.Enable()
         self.set_block_errors(state=True)
         self.grid.get_last().random_game()
         self.set_block_errors(state=False)
@@ -117,6 +124,8 @@ class MyPanel(wx.Panel):
         self.startManual.Enable()
         self.startManual.SetLabel("Set new gama manually")
         self.startAuto.Enable()
+        self.check.Disable()
+        self.solve.Disable()
         self.endGame.Disable()
 
     def post_determine_cell(self, possibility_id):
@@ -138,11 +147,19 @@ class MyPanel(wx.Panel):
         square_id, cell_id = option_id
         self.squares[square_id].show_error(cell_id, show)
 
-    def show_errors(self, errors):
+    def show_errors(self, errors, delay=.2):
         """Showing collided numbers"""
         for x in errors:
             self.show_error(x, True)
-        sleep(.2)
+        while delay >= 1:
+            self.check.Disable()
+            self.check.SetLabel('%d' % int(delay))
+            sleep(1)
+            delay -= 1
+            if self.solve.IsEnabled():
+                self.check.Enable()
+        sleep(delay)
+        self.check.SetLabel('Check')
         for x in errors:
             self.show_error(x, False)
 
@@ -162,10 +179,14 @@ class MyPanel(wx.Panel):
             self.grid.__class__.block_errors = state
             self.validate_in_flow.SetValue(state)
         else:
-            self.grid.__class__.block_errors = self.validate_in_flow.IsChecked()
+            if len(self.grid.get_errors_list()) is 0:
+                self.grid.__class__.block_errors = self.validate_in_flow.IsChecked()
+            else:
+                self.status_bar.SetStatusText('Errors already on board. Correct errors to activate checkbox')
+                self.validate_in_flow.SetValue(False)
 
-    def check_game(self):
-        pass
+    def check_correctness(self, event):
+        Thread(target=self.grid.check_correctness).start()
 
-    def solve_game(self):
-        pass
+    def solve_game(self, event):
+        Thread(target=self.grid.solve_game).start()
